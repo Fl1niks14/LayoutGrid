@@ -1,0 +1,92 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	display: grid;
+	height: 100vh;
+}
+.grid-container {
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	grid-template-columns: 1fr 3fr;
+	grid-template-areas:
+			"header header "
+			"aside main"
+			"footer footer";
+	height: 100%;
+}
+
+header {
+	grid-area: header;
+	background-color: #333;
+	color: white;
+	padding: 20px;
+	text-align: center;
+}
+
+aside {
+	grid-area: aside;
+	background-color: #f4f4f4;
+	padding: 20px;
+	border-right: 1px solid #ddd;
+}
+
+main {
+	grid-area: main;
+	padding: 20px;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #333;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
+
+.news-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.news-list li {
+	margin-bottom: 10px;
+}
+
+.news-list li a {
+	text-decoration: none;
+	color: #007bff;
+}
+
+.news-list li a:hover {
+	color: #ff0000;
+}
+
+.related-articles {
+	margin-top: 20px;
+}
+
+.related-articles .articles-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.related-articles article {
+	margin-top: 20px;
+	background-color: #f9f9f9;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	text-align: center;
+}
+
+.related-articles article h3 {
+	margin: 0 0 10px;
+}
+
+.related-articles article p {
+	font-size: 14px;
+	color: #666;
+}
